@@ -1,9 +1,10 @@
 'use strict';
 
 const React = require('react');
+const ReactDOM = require('react-dom');
 const HelloApp = require('./components/HelloApp.js');
 
-React.render(
+ReactDOM.render(
   <HelloApp />,
   document.getElementById('react')
 );
