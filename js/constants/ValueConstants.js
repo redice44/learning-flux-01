@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  const keyMirror = require('key-mirror');
+  const keyMirror = require('keymirror');
 
   module.exports = {
     ActionTypes: keyMirror({

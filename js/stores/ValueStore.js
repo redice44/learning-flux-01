@@ -9,27 +9,35 @@
   const ActionTypes = ValueConstants.ActionTypes;
   const CHANGE_EVENT = 'change';
 
-  let ValueStore = assign({}, EventEmiiter.prototype, {
+  let _value = 0;
+
+  let ValueStore = assign({}, EventEmitter.prototype, {
     emitChange: () => {
       this.emit(CHANGE_EVENT);
     },
 
-    addChangeListener: (callback) => {
+    addChangeListener: function(callback) {
       this.on(CHANGE_EVENT, callback);
     },
 
-    removeChangeListener: (callback) => {
+    removeChangeListener: function(callback) {
       this.removeListener(CHANGE_EVENT, callback);
-    }
+    },
+
+    get: function() {
+      return _value;
+    },
   });
 
   ValueStore.dispatchToken = ValueDispatcher.register((action) => {
     switch(action.type) {
       case ActionTypes.CHANGE_VALUE:
-        console.log('Action: Change Value');
+        console.log('Store Action: Change Value');
         break;
       default:
         // do nothing
     }
   });
+
+  module.exports = ValueStore;
 })();
