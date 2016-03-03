@@ -4,7 +4,8 @@
   "description": "First look at Flux",
   "main": "js/app.js",
   "scripts": {
-    "start": "watchify -o js/bundle.js -v -d js/app.js"
+    "start": "watchify -o js/bundle.js -v -d js/app.js",
+    "build": "browserify . | uglify -cm > js/bundle.min.js"
   },
   "author": "Matt Thomson<red.cataclysm@gmail.com>",
   "license": "MIT",
@@ -16,10 +17,7 @@
   },
   "browserify": {
     "transform": [
-      "reactify",
-      {
-        "es6": true
-      }
+      [ "reactify", { "es6": true } ]
     ]
   },
   "dependencies": {
