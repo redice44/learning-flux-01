@@ -1,0 +1,10 @@
+{
+  "name": "hello-flux",
+  "version": "0.0.1",
+  "description": "First look at Flux",
+  "main": "js/app.js",
+  "scripts": {
+  },
+  "author": "Matt Thomson<red.cataclysm@gmail.com>",
+  "license": "MIT"
+}
