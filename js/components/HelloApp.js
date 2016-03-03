@@ -1,13 +1,15 @@
-'use strict';
+(function() {
+  'use strict';
 
-const React = require('react');
+  const React = require('react');
 
-let HelloApp = React.createClass({
-  render: () => {
-    return (
-      <div>hi</div>
-    );
-  }
-});
+  let HelloApp = React.createClass({
+    render: () => {
+      return (
+        <div>hi</div>
+      );
+    }
+  });
 
-module.exports = HelloApp;
+  module.exports = HelloApp;
+})();
