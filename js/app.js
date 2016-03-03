@@ -3,10 +3,10 @@
 
   const React = require('react');
   const ReactDOM = require('react-dom');
-  const HelloApp = require('./components/HelloApp.js');
-
+  const ValueApp = require('./components/ValueApp.js');
+  
   ReactDOM.render(
-    <HelloApp />,
+    <ValueApp />,
     document.getElementById('react')
   );
 })();

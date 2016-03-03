@@ -5,7 +5,7 @@
   const ValueDisplay = require('./ValueDisplay.js');
   const ValueButton = require('./ValueButton.js');
 
-  let HelloApp = React.createClass({
+  let ValueApp = React.createClass({
     render: () => {
       return (
         <div>
@@ -18,5 +18,5 @@
     }
   });
 
-  module.exports = HelloApp;
+  module.exports = ValueApp;
 })();
