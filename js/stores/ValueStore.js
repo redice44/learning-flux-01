@@ -12,7 +12,7 @@
   let _value = 0;
 
   let ValueStore = assign({}, EventEmitter.prototype, {
-    emitChange: () => {
+    emitChange: function() {
       this.emit(CHANGE_EVENT);
     },
 
@@ -32,7 +32,8 @@
   ValueStore.dispatchToken = ValueDispatcher.register((action) => {
     switch(action.type) {
       case ActionTypes.CHANGE_VALUE:
-        console.log('Store Action: Change Value');
+        _value = action.value;
+        ValueStore.emitChange();
         break;
       default:
         // do nothing
