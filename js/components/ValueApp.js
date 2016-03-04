@@ -34,9 +34,9 @@
       return (
         <div>
           <ValueDisplay value = {val} />
-          <ValueButton value = {val} />
-          <ValueButton value = {val} />
-          <ValueButton value = {val} />
+          <ValueButton change = '1' />
+          <ValueButton change = '10' />
+          <ValueButton change = '-1' />
         </div>
       );
     }

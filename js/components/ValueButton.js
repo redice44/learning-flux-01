@@ -13,13 +13,14 @@
     }
 
     render() {
+      let change = this.props.change;
       return (
-        <div onClick={this.inc}>Plus 1</div>
+        <div onClick={this.inc}>Change {change}</div>
       );
     }
 
     inc() {
-      ValueActionCreators.changeValue(this.props.value + 1);
+      ValueActionCreators.changeValue(this.props.change);
     }
   }
 

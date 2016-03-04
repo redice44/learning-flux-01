@@ -32,7 +32,7 @@
   ValueStore.dispatchToken = ValueDispatcher.register((action) => {
     switch(action.type) {
       case ActionTypes.CHANGE_VALUE:
-        _value = action.value;
+        _value += parseInt(action.value);
         ValueStore.emitChange();
         break;
       default:
